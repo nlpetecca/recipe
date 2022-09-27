@@ -1,0 +1,18 @@
+@import url(https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400 
+);
+
+.save-svg {
+    background-image: url(images/save.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 200px;
+}
+
+menu li {
+    height: 100px;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, footer, :is(menu, nav) li {
+    text-transform: uppercase;
+}
