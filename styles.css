@@ -1,18 +1,71 @@
 @import url(https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400 
 );
 
-.save-svg {
-    background-image: url(images/save.svg);
+body {
+    position: relative;
+}
+
+/* ----------SVGs---------- */
+.menu-svgs {
+    display: flex;
+    flex-direction: column;
     background-repeat: no-repeat;
-    background-position: center;
-    max-width: 200px;
+    background-position: top;
+    max-width: 45px;
+    justify-content: end;
+}
+.save {
+    background-image: url(images/save.svg);
+}
+
+.share {
+    background-image: url(images/share.svg);
+}
+
+.print {
+    background-image: url(images/print.svg);
+}
+
+.jump {
+    background-image: url(images/jump.svg);
+}
+
+
+
+
+/* ----------other content below---------- */
+
+h1, h2, h3, h4, h5, h6, footer, nav li, menu button {
+    text-transform: uppercase;
 }
 
 menu li {
-    height: 100px;
+    height: 60px;
     list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6, footer, :is(menu, nav) li {
-    text-transform: uppercase;
+menu button {
+    color: #EB5428;
+    background-color: transparent;
+    border: none;
+    padding: 0;
 }
+
+menu button:hover {
+    cursor: pointer;
+    background-color: #EB5428;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
