@@ -1,17 +1,22 @@
 @import url(https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400 
 );
 
+* {
+    transition: .5s;
+}
+
 body {
     position: relative;
     width: 350px;
     margin: 0 auto;
+    background-color: rgba(122, 191, 191, .5);
 }
 
 main {
-    background-color: lightblue;
+    background-color: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6, footer, nav button, menu button {
+h1, h2, h3, h4, h5, h6, footer, nav :is(button, a), menu button {
     text-transform: uppercase;
 }
 
@@ -24,12 +29,8 @@ h1, h2, h3, h4, h5, h6, footer, nav button, menu button {
     max-width: 45px;
 }
 
-.menu-svgs, .hamburger {
+.menu-svgs, .hamburger, .avatar {
     justify-content: end;
-}
-
-.nav-svgs:not(.hamburger) {
-    justify-content: center;
 }
 
 .menu-svgs {
@@ -63,21 +64,23 @@ h1, h2, h3, h4, h5, h6, footer, nav button, menu button {
 
 .home {
     background-image: url(images/logo.svg);
-    margin: 0 40px;
+    background-color: #EB5428;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .avatar {
     background-image: url(images/avatar.svg); 
-    background-size: 65%;
+    fill: #EB5428;
+    background-size: 50%;
 }
-
 
 /* menu is a temporary style just to see what i'm doing */
 menu {
     margin-top: 900px;
 }
 
-/* ----------hamburger menu---------- */
+/* ----------menu buttons---------- */
 menu li, nav li {
     list-style: none;
     height: 60px;
@@ -96,12 +99,13 @@ menu button:hover {
     color: #ffffff;
 }
 
+
+/* ----------nav buttons---------- */
 nav {
     position: fixed;
     top: 0;
     width:350px;
     z-index: 1;
-    transform: translate(-19px);
 }
 
 nav h2 {
@@ -111,17 +115,24 @@ nav h2 {
 }
 
 nav button {
-    color: #000000;
     background-color: transparent;
     border: none;
-    /* padding: 45px 0 0 0; */
     font-weight: 700;
 }
 
-nav button:hover {
+nav a {
+    color: #EB5428;
+    text-align: center;
+}
+
+nav a {
+    height: 60px;
+}
+
+nav a:hover {
     cursor: pointer;
-    color: #ffffff;
     background-color: #EB5428;
+    color: #ffffff;
 }
 
 nav ul {
@@ -131,8 +142,11 @@ nav ul {
     padding: 0;
 }
 
-nav li:not(.hamburger, .home, .avatar) {
+nav li:not(.hamburger, .avatar) {
     margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
 }
 
 li a {
@@ -149,14 +163,14 @@ nav label {
     top: 0;
 }
 
-input {
+#dropdown {
     display: none;
 }
 
-input:checked~ul {
+#dropdown:checked~ul {
     max-height: 800px;
     width: 100%;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 
@@ -164,6 +178,8 @@ input:checked~ul {
 nav ul {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background-color: #ffffff;
 }
 
 .avatar {
@@ -171,6 +187,40 @@ nav ul {
     grid-row: 1/2;
 }
 
+.breakfast {
+    grid-column: 1/span 3;
+    grid-row: 2/3;
+}
+
+.brunch {
+    grid-column: 1/span 3;
+    grid-row: 3/4;
+}
+
+.lunch {
+    grid-column: 1/span 3;
+    grid-row: 4/5;
+}
+
+.dinner {
+    grid-column: 1/span 3;
+    grid-row: 5/6;
+}
+
+.appetizers {
+    grid-column: 1/span 3;
+    grid-row: 6/7;
+}
+
+.desserts {
+    grid-column: 1/span 3;
+    grid-row: 7/8;
+}
+
+.beverages {
+    grid-column: 1/span 3;
+    grid-row: 8/9;
+}
 
 /* media query for bigger screen sizes */
 
@@ -215,21 +265,13 @@ nav ul {
     background-size: 70%;
 }
 
-
-
-
-
-
- nav li:not(.hamburger) {
+nav li:not(.hamburger) {
     height: 90px;
 }
 
-nav button {
-    padding: 45px 0 0 0;
+nav li:not(.hamburger, .home, .avatar) {
+    max-width: 30%;
 }
-
-
-
 
 
 
