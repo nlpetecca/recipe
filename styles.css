@@ -16,8 +16,37 @@ main {
     background-color: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6, footer, nav :is(button, a), menu button {
+/* ----------Fonts---------- */
+h1, h2, footer, nav :is(button, a), menu button {
     text-transform: uppercase;
+}
+
+h1, h2, nav a, nav button, figcaption, menu button, #social li, footer {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+nav a, nav button, figcaption, menu button, #social li, footer {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p, dd, li, nav, input {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+dt {
+    font-family: Montserrat;
+    font-weight: 700;
 }
 
 /* ----------SVGs---------- */
@@ -81,9 +110,9 @@ menu {
 }
 
 /* ----------menu buttons---------- */
-menu li, nav li {
+menu li, .hamburger, .home, .avatar {
     list-style: none;
-    height: 60px;
+    height: 65px;
 }
 
 menu button {
@@ -117,16 +146,12 @@ nav h2 {
 nav button {
     background-color: transparent;
     border: none;
-    font-weight: 700;
 }
 
 nav a {
     color: #EB5428;
     text-align: center;
-}
-
-nav a {
-    height: 60px;
+    /* height: 60px; */
 }
 
 nav a:hover {
@@ -222,9 +247,12 @@ nav ul {
     grid-row: 8/9;
 }
 
-/* media query for bigger screen sizes */
+/* ----------Search field---------- */
+label[for="site-search"] {
+    visibility: hidden;
+}
 
-
+/* ----------media query for bigger screen sizes---------- */
 @media (min-width: 500px) {
 .menu-svgs, .nav-svgs:not(.hamburger) {
     justify-content: end;
@@ -265,7 +293,7 @@ nav ul {
     background-size: 70%;
 }
 
-nav li:not(.hamburger) {
+nav li:not(.hamburger, .avatar) {
     height: 90px;
 }
 
