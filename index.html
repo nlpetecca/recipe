@@ -14,15 +14,13 @@
 </head>
 
 <body>
-    <header>
+    <main>
         <menu>
             <li class="save menu-svgs"><button>Save</button></li>
             <li class="share menu-svgs"><button>Share</button></li>
             <li class="print menu-svgs"><button>Print</button></li>
             <li class="jump menu-svgs"><button>Jump</button></li>
         </menu>
-    </header>
-    <main>
         <section>
             <h1>Street Tacos</h1>
             <img src="images/street-tacos.png" alt="Two street tacos with limes and onions">
@@ -38,7 +36,7 @@
                 amazing taco recipes! These taco-stuffed avocados, Baja fish tacos, and ground beef tacos will not
                 disappoint!!</p>
         </section>
-        <section>
+        <section class="details-section">
             <h2>Details</h2>
             <dl>
                 <dt>Prep Time</dt>
@@ -61,7 +59,7 @@
                 <dd>6 Tacos</dd>
             </dl>
         </section>
-        <section>
+        <section class="ingredients-section">
             <h2>Ingredients</h2>
             <ul>
                 <li>Flank steak</li>
@@ -77,7 +75,7 @@
                 <li>Corn tortillas</li>
             </ul>
         </section>
-        <section>
+        <section class="directions-section">
             <h2>Directions</h2>
             <ol>
                 <li>Cut and mix: Cut the flank steak into one inch pieces. In a medium sized bowl add the soy sauce,
@@ -92,31 +90,38 @@
                     Need some side dishes?</li>
             </ol>
         </section>
-        <aside>
+        <aside class="dishes">
             <h2>Need some side dishes?</h2>
             <figure>
                 <img src="images/mexican-rice.png" alt="Bowl of Mexican rice with lime wedges">
                 <figcaption>Mexican Rice</figcaption>
                 <p>Traditional recipe with a twist.</p>
-                <p>Rating 4 of 5 Stars(svg)</p>
+                <p>Rating</p>
+                <span class="star-orange"></span>
+                <span class="star-white"></span>
             </figure>
             <figure>
                 <img src="images/salsa.png" alt="Salsa on a tray with garlic, bread, and peppers">
                 <figcaption>Salsa</figcaption>
                 <p>Just the right amount of spice.</p>
-                <p>Rating 5 of 5 Stars(svg)</p>
+                <p>Rating</p>
+                <span class="stars-all-orange"></span>
             </figure>
             <figure>
                 <img src="images/guacamole.png" alt="Birds-eye view of guacamole">
                 <figcaption>Guacamole</figcaption>
                 <p>Fresh and healthy.</p>
-                <p>Rating 4 of 5 Stars (svg)</p>
+                <p>Rating</p>
+                <span class="star-orange"></span>
+                <span class="star-white"></span>
             </figure>
             <figure>
                 <img src="images/tortillas.png" alt="Golden-brown tortilla shells in a stack">
                 <figcaption>Tortillas</figcaption>
                 <p>Easy to make and so good.</p>
-                <p>Rating 4 of 5 Stars(svg)</p>
+                <p>Rating</p>
+                <span class="star-orange"></span>
+                <span class="star-white"></span>
             </figure>
         </aside>
         <nav>
@@ -136,16 +141,18 @@
                 <li class="avatar nav-svgs"><button>Sign in</button></li>
             </ul>
         </nav>
-        <label for="site-search">Search</label>
-        <input type="search" id="site-search" name="site-search" placeholder="Find a recipe">
-        <button>Search</button>
+        <section class="search-section">
+            <label for="site-search">Search</label>
+            <input type="search" id="site-search" name="site-search" size="35" placeholder="Find a recipe">
+            <button class="search-button"><span></span></button>
+        </section>
         <section>
             <h2 id="social">Social Media Links</h2>
-            <ul>
-                <li>Facebook (facebook svg)</li>
-                <li>Instagram (instagram svg)</li>
-                <li>YouTube (youtube svg)</li>
-                <li>Tik Tok (tiktok svg)</li>
+            <ul class="social-logos">
+                <li class="facebook social-svgs"><button>Facebook</button></li>
+                <li class="instagram social-svgs"><button>Instagram</button></li>
+                <li class="youtube social-svgs"><button>YouTube</button></li>
+                <li class="tiktok social-svgs"><button>Tik&nbsp;Tok</button></li>
             </ul>
         </section>
     </main>

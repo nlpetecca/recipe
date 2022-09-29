@@ -7,7 +7,7 @@
 
 body {
     position: relative;
-    width: 350px;
+    width: 400px;
     margin: 0 auto;
     background-color: rgba(122, 191, 191, .5);
 }
@@ -16,58 +16,77 @@ main {
     background-color: #ffffff;
 }
 
+img {
+    max-width: 400px;
+}
+
+ol {
+    padding-left: 30px;
+}
+
 /* ----------Fonts---------- */
 h1, h2, footer, nav :is(button, a), menu button {
     text-transform: uppercase;
 }
 
-h1, h2, nav a, nav button, figcaption, menu button, #social li, footer {
+h1, h2, nav a, nav button, figcaption, menu button, .social-logos button, footer {
     font-family: "Bebas Neue", sans-serif;
 }
 
 h1 {
     font-size: 40px;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
 }
 
 h2 {
     font-size: 30px;
+    text-align: center;
+    margin: 0;
 }
 
-nav a, nav button, figcaption, menu button, #social li, footer {
+nav a, nav button, figcaption, menu button, .social-logos button, footer {
     font-size: 20px;
     font-weight: 400;
 }
 
 p, dd, li, nav, input {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
 
-dt {
-    font-family: Montserrat;
+p {
+    padding: 10px;
+    margin: 0;
+}
+
+dt, .dishes p:last-of-type {
+    font-family: Montserrat, sans-serif;
     font-weight: 700;
 }
 
 /* ----------SVGs---------- */
-.menu-svgs, .nav-svgs {
+.menu-svgs, .nav-svgs, .social-svgs  {
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
     background-position: top;
+}
+
+.menu-svgs, .nav-svgs {
     max-width: 45px;
 }
 
-.menu-svgs, .hamburger, .avatar {
+.social-svgs {
+    max-width: 75px;
+}
+
+.menu-svgs, .hamburger, .avatar, .social-svgs {
     justify-content: end;
-}
-
-.menu-svgs {
-    max-width: 45px;
-}
-
-.nav-svgs {
-    max-width: 100px;
 }
 
 .save {
@@ -86,7 +105,21 @@ dt {
     background-image: url(images/jump.svg);
 }
 
-/* ----------nav svgs---------- */
+.star-white {
+    background-image: url(images/star-white.svg);
+    background-repeat: repeat-x;
+}
+
+.star-orange {
+    background-image: url(images/star-orange.svg);
+    background-repeat: repeat-x;
+}
+
+/* ----------Nav SVGs---------- */
+.nav-svgs {
+    max-width: 100px;
+}
+
 .hamburger {
     background-image: url(images/hamburger.svg);
 }
@@ -100,29 +133,50 @@ dt {
 
 .avatar {
     background-image: url(images/avatar.svg); 
-    fill: #EB5428;
-    background-size: 50%;
+    background-size: 40%;
 }
 
-/* menu is a temporary style just to see what i'm doing */
+/* ----------Social SVGs--------- */
+.facebook {
+    background-image: url(images/facebook.svg);
+}
+
+.instagram {
+    background-image: url(images/instagram.svg);
+}
+
+.youtube {
+    background-image: url(images/youtube.svg);
+}
+
+.tiktok {
+    background-image: url(images/tiktok.svg);
+}
+
+
+/* ----------Menu---------- */
 menu {
-    margin-top: 900px;
+    margin: 60px 0 0 0;
+    padding: 180px 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #F2F2F2;
 }
 
-/* ----------menu buttons---------- */
-menu li, .hamburger, .home, .avatar {
+/* ----------Menu Buttons---------- */
+menu li, .hamburger, .home, .avatar, .social-logos li {
     list-style: none;
     height: 65px;
 }
 
-menu button {
+menu button, .social-logos button {
     color: #EB5428;
     border: none;
     padding: 0;
     background-color: transparent;
 }
 
-menu button:hover {
+menu button:hover, .social-logos button:hover {
     cursor: pointer;
     background-color: #EB5428;
     color: #ffffff;
@@ -133,7 +187,7 @@ menu button:hover {
 nav {
     position: fixed;
     top: 0;
-    width:350px;
+    width: 400px;
     z-index: 1;
 }
 
@@ -151,7 +205,6 @@ nav button {
 nav a {
     color: #EB5428;
     text-align: center;
-    /* height: 60px; */
 }
 
 nav a:hover {
@@ -181,8 +234,9 @@ li a {
 }
 
 nav label {
+    cursor: pointer;
     display: inline-block;
-    padding: 35px;
+    padding: 30px 45px;
     position: absolute;
     left: 0;
     top: 0;
@@ -195,7 +249,18 @@ nav label {
 #dropdown:checked~ul {
     max-height: 800px;
     width: 100%;
-    /* background-color: lightblue; */
+}
+
+.home button {
+    padding: 30px;
+}
+
+:is(.home button, .avatar button):hover {
+    cursor: pointer;
+}
+
+.avatar button {
+    padding: 45px 0 0 0;
 }
 
 
@@ -250,10 +315,133 @@ nav ul {
 /* ----------Search field---------- */
 label[for="site-search"] {
     visibility: hidden;
+    width: 0;
 }
 
-/* ----------media query for bigger screen sizes---------- */
-@media (min-width: 500px) {
+.search-section {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}
+
+input:placeholder-shown {
+    font-size: 12px;
+}
+
+#site-search {
+    border: 2px solid #EB5428;
+    height: 40px;
+    size: 300px;
+}
+
+.search-button {
+    background-image: url(images/search.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    height: 40px;
+}
+
+.search-button span {
+    padding: 0 20px;
+}
+
+/* ----------Details Sections---------- */
+.details-section {
+    padding: 10px;
+}
+
+dl {
+    display: flex;
+    margin: 3px 0;
+}
+
+dd {
+    margin-left: 10px;
+}
+
+/* ----------Ingredients Sections---------- */
+.ingredients-section li {
+    margin: 10px 0;
+}
+
+/* ----------Directions Sections---------- */
+.directions-section li {
+    margin-bottom: 15px;
+}
+
+/* ----------Dishes---------- */
+.dishes {
+    background-color: #7ABFBF;
+}
+
+figure {
+    margin: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: repeat(4, 2em);
+}
+
+figcaption {
+    padding: 10px;
+}
+
+.dishes img {
+    max-width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/5;
+}
+
+.dishes figcaption {
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+
+.dishes p:first-of-type {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.dishes p:last-of-type {
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+
+.star-orange:not(.stars-all-orange) {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width: 100px;
+    
+}
+
+.stars-all-orange {
+    background-image: url(images/star-orange.svg);
+    background-repeat: repeat-x;
+    width: 125px;
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.star-white {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    width: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------Media Queries---------- */
+@media (min-width: 600px) {
 .menu-svgs, .nav-svgs:not(.hamburger) {
     justify-content: end;
 }
