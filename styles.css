@@ -162,7 +162,7 @@ menu, .social-logos {
 
 menu {
     margin: 60px 0 0 0;
-    padding: 180px 0 0 0;
+    padding: 180px 0 10px 0;
     background-color: #F2F2F2;
 }
 
@@ -907,7 +907,7 @@ footer img {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: .1fr 1fr;
-        padding-bottom: 15px;
+        padding-bottom: 0;
     }
 
     .dishes h2 {
@@ -965,6 +965,20 @@ footer img {
     }
 
 
+    /* ----------Footer---------- */
+    small {
+        margin: 0;
+        transform: translate(200px, -230px);
+    }
+
+    footer img {
+        margin: 0 15px;
+        padding-bottom: 25px;
+    }
+
+    .social-logos {
+        transform: translateX(150px);
+    }
 
 
 
