@@ -501,6 +501,14 @@ footer img {
         height: 100px;
     }
 
+    .home button {
+        padding: 50px;
+    }
+
+    .avatar button {
+        padding: 60px 0 0 0;
+    }
+
     .search-section {
         position: fixed;
         top: 3%;
@@ -709,6 +717,10 @@ footer img {
         justify-content: end;
     }
 
+    .nav-svgs {
+        max-width: 150px;
+    }
+
     .breakfast {
         background-image: url(images/breakfast.png); 
         background-size: 70%;
@@ -788,7 +800,7 @@ footer img {
     }
 
     .avatar button {
-        padding: 63px 0 10px 0;
+        padding: 74px 0 10px 0;
     }
 
     .breakfast {
@@ -979,17 +991,6 @@ footer img {
     .social-logos {
         transform: translateX(150px);
     }
-
-
-
-
-
-
-
-
-
-
-    
 }
 
 
